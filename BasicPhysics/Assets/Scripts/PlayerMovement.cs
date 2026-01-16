@@ -13,12 +13,14 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Ground")
-            groundContact = true;
+            GetComponent<Renderer>().material.color = Color.gray;
+        groundContact = true;
     }
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.tag == "Ground")
-            groundContact = false;
+            GetComponent<Renderer>().material.color = Color.softYellow;
+        groundContact = false;
     }
 
     void Start()

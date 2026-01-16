@@ -16,10 +16,12 @@ public class ObstacleMud : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         other.GetComponent<Rigidbody>().linearDamping = dampingAdded;
+        other.GetComponent<Renderer>().material.color = Color.rosyBrown;
     }
 
     private void OnTriggerExit(Collider other)
     {
         other.GetComponent<Rigidbody>().linearDamping = 0;
+        other.GetComponent<Renderer>().material.color = Color.gray;
     }
 }
