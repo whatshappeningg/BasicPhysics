@@ -13,15 +13,16 @@ public class PlayerMovement2 : MonoBehaviour
 
     void Update()
     {
-        Debug.DrawLine(new Vector3(transform.position.x, transform.position.y, transform.position.z + transform.localScale.z / 2),
-                        new Vector3(0, 0, raycastReach), Color.red);
-
         //print("Velocidad: " + playerRigidbody.linearVelocity);
     }
     void FixedUpdate()
     {
-        if (Physics.Raycast(transform.position, transform.forward, raycastReach))
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, raycastReach))
         {
+            Debug.DrawLine(new Vector3(transform.position.x, transform.position.y, transform.position.z + transform.localScale.z / 2),
+                        hit.point, Color.red);
+
             if (playerRigidbody.linearVelocity.z > 0)
                 playerRigidbody.linearVelocity -= Vector3.forward;
             else
