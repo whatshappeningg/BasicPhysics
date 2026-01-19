@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ObstacleSprings2 : MonoBehaviour
+public class ObstacleSprings_H : MonoBehaviour
 {
     // Attributes
     // public
@@ -17,7 +17,6 @@ public class ObstacleSprings2 : MonoBehaviour
 
             playerRigidbody.linearVelocity = Vector3.zero;
             playerRigidbody.AddForce(-Vector3.forward * springForce);
-            print("Por qué no va");
         }
 
     }

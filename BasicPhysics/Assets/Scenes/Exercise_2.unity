@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 760355257}
   - component: {fileID: 760355256}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Spring.V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 1224135992}
   - component: {fileID: 1224135991}
   m_Layer: 0
-  m_Name: Spring
+  m_Name: Spring.H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
