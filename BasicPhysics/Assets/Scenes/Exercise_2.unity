@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &211201820 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8229405026410683086, guid: d58629e47c4a8ad4c92d565e2facb5ed, type: 3}
+  m_PrefabInstance: {fileID: 1305323934}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &621963853
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,13 +686,30 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4886763456465245730, guid: d58629e47c4a8ad4c92d565e2facb5ed, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1895912219}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8229405026410683086, guid: d58629e47c4a8ad4c92d565e2facb5ed, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 1305323940}
   m_SourcePrefab: {fileID: 100100000, guid: d58629e47c4a8ad4c92d565e2facb5ed, type: 3}
 --- !u!4 &1305323935 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4886763456465245730, guid: d58629e47c4a8ad4c92d565e2facb5ed, type: 3}
   m_PrefabInstance: {fileID: 1305323934}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1305323940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211201820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e52c78024e666a49a88060bcb8f829c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement2
+  raycastReach: 2
+  playerSpeed: 1
 --- !u!1 &1533359510
 GameObject:
   m_ObjectHideFlags: 0

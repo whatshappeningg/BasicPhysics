@@ -22,7 +22,7 @@ public class PlayerMovement2 : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, transform.forward, raycastReach))
         {
-            if (playerRigidbody.linearVelocity.z >= 0)
+            if (playerRigidbody.linearVelocity.z > 0)
                 playerRigidbody.linearVelocity -= Vector3.forward;
             else
                 playerRigidbody.linearVelocity = Vector3.zero;
