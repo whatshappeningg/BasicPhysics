@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement2 : MonoBehaviour
@@ -30,10 +31,10 @@ public class PlayerMovement2 : MonoBehaviour
     void FixedUpdate()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, raycastReach))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, raycastReach, LayerMask.GetMask("Walls")))
         {
             Debug.DrawLine(new Vector3(transform.position.x, transform.position.y, transform.position.z + transform.localScale.z / 2),
-                        hit.point, Color.red);
+                    hit.point, Color.red);
 
             if (playerRigidbody.linearVelocity.z > 0)
                 playerRigidbody.linearVelocity -= Vector3.forward;

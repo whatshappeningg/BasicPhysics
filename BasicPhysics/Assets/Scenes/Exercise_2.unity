@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18776caaacf79ec4892935a28165bc9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleSprings_V
-  springForce: 500
+  springForce: 100
 --- !u!65 &760355261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -602,7 +602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e52c78024e666a49a88060bcb8f829c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement2
-  raycastReach: 0
+  raycastReach: 2
   playerSpeed: 1
 --- !u!1 &1533359510
 GameObject:
@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 1533359513}
   - component: {fileID: 1533359512}
   - component: {fileID: 1533359511}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
