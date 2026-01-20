@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class CameraMouseRaycaster : MonoBehaviour
 {
+    // Attributes
+    // public
     public Camera camera1;
 
     void Update()

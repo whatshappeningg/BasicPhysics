@@ -18,10 +18,5 @@ public class ObstacleSprings_H : MonoBehaviour
             playerRigidbody.linearVelocity = Vector3.zero;
             playerRigidbody.AddForce(-Vector3.forward * springForce, ForceMode.Impulse);
         }
-
-    }
-    private void Start()
-    {
-        Debug.DrawRay(transform.position, -Vector3.forward, Color.green);
     }
 }

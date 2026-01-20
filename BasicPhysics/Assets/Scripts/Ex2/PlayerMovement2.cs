@@ -3,8 +3,12 @@ using UnityEngine;
 
 public class PlayerMovement2 : MonoBehaviour
 {
+    // Attributes
+    // public
     public float raycastReach = 2;
-    public float playerSpeed = 5;
+    public float playerSpeed = 1;
+
+    // private
     Rigidbody playerRigidbody;
     private bool groundContact;
 
@@ -24,10 +28,6 @@ public class PlayerMovement2 : MonoBehaviour
         playerRigidbody = GetComponent<Rigidbody>();
     }
 
-    void Update()
-    {
-        //print("Velocidad: " + playerRigidbody.linearVelocity);
-    }
     void FixedUpdate()
     {
         RaycastHit hit;
