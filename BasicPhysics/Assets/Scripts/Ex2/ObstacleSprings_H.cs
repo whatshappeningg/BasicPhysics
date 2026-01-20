@@ -4,7 +4,7 @@ public class ObstacleSprings_H : MonoBehaviour
 {
     // Attributes
     // public
-    public float springForce = 40;
+    public float springForce = 250;
 
     // private
     Rigidbody playerRigidbody;
@@ -16,7 +16,7 @@ public class ObstacleSprings_H : MonoBehaviour
             playerRigidbody = collision.gameObject.GetComponent<Rigidbody>();
 
             playerRigidbody.linearVelocity = Vector3.zero;
-            playerRigidbody.AddForce(-Vector3.forward * springForce);
+            playerRigidbody.AddForce(-Vector3.forward * springForce, ForceMode.Impulse);
         }
 
     }

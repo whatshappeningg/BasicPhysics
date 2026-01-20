@@ -5,7 +5,19 @@ public class PlayerMovement2 : MonoBehaviour
     public float raycastReach = 2;
     public float playerSpeed = 5;
     Rigidbody playerRigidbody;
+    private bool groundContact;
 
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+            groundContact = true;
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+            groundContact = false;
+    }
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody>();
@@ -28,8 +40,10 @@ public class PlayerMovement2 : MonoBehaviour
             else
                 playerRigidbody.linearVelocity = Vector3.zero;
         }
-        else
+        else if (groundContact)
             playerRigidbody.linearVelocity = Vector3.forward * playerSpeed;
+        else
+            playerRigidbody.linearVelocity = Vector3.zero;
 
     }
 }

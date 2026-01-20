@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 621963854}
   m_Layer: 2
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,9 +245,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 760355259}
+  - component: {fileID: 760355260}
   - component: {fileID: 760355258}
   - component: {fileID: 760355257}
-  - component: {fileID: 760355256}
+  - component: {fileID: 760355261}
   m_Layer: 0
   m_Name: Spring.V
   m_TagString: Untagged
@@ -255,29 +256,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &760355256
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 760355255}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.24594097
-  m_Height: 2.8978891
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!23 &760355257
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -343,12 +321,46 @@ Transform:
   m_GameObject: {fileID: 760355255}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.064, y: -0.733, z: 9.66923}
+  m_LocalPosition: {x: -0.064, y: -0.733, z: 2.64}
   m_LocalScale: {x: 1.5, y: 0.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &760355260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760355255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18776caaacf79ec4892935a28165bc9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleSprings_V
+  springForce: 500
+--- !u!65 &760355261
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760355255}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!1 &1224135984
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +447,7 @@ Transform:
   m_GameObject: {fileID: 1224135984}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.79, y: 0.063, z: 5.35}
+  m_LocalPosition: {x: -0.27, y: 0.063, z: 6.11}
   m_LocalScale: {x: 1.718, y: 0.5066, z: 1.043424}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -453,7 +465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2bc303dc0f1aa34483134ff3770309f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleSprings2
-  springForce: 10000
+  springForce: 500
 --- !u!54 &1224135991
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -590,7 +602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e52c78024e666a49a88060bcb8f829c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement2
-  raycastReach: 2
+  raycastReach: 0
   playerSpeed: 1
 --- !u!1 &1533359510
 GameObject:
@@ -725,7 +737,7 @@ Transform:
   m_GameObject: {fileID: 1533359510}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.96}
+  m_LocalPosition: {x: 0, y: 0, z: 5.24}
   m_LocalScale: {x: 8, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
